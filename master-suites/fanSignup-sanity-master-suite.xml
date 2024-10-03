@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Create Sanity Suite">
+    <suite-files >
+        <suite-file path="./suites/before-master-suite.xml">
+            <parameter name="filePath" value="/data/fanAllAccess.xls"></parameter><!--fanAllAccess.xls, fanSnapchat.xls, fanInstagram.xls-->
+        </suite-file>
+        <suite-file path="./suites/fanAllAccessSignUp.xml"></suite-file><!--fanAllAccessSignUp.xml  ,fanSnapchatSignUp.xml ,fanInstagramSignUp.xml-->
+        <suite-file path="./suites/logout-suite.xml"></suite-file>
+        <suite-file path="./suites/after-master-suite.xml"></suite-file>
+    </suite-files>
+</suite> <!-- Suite -->

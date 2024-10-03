@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Logout Suite">
+	<listeners>
+		<listener class-name="com.stella.playwright.listener.StellaListener" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+	<test name="Logout Test">
+		<classes>
+			<class name="com.stella.playwright.test.LogoutTest" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

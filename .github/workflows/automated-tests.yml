@@ -1,0 +1,41 @@
+name: Automated Tests
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  run-tests:
+    runs-on: dev1
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v3
+
+      - name: Print Java Version
+        run: java --version
+
+      - name: Running Tests
+        run: |
+          source "/home/gitlab-runner/.sdkman/bin/sdkman-init.sh"
+          sdk use java 17.0.12.crac-zulu
+          mvn clean test
+
+  upload-test-result:
+    runs-on: dev1
+    needs: run-tests
+    if: always()  # Ensures this job runs regardless of the outcome of run-tests
+    steps:
+      - name: Upload Resources
+        run: |
+          zip -r target.zip target
+          zip -r screenshot.zip /home/gitlab-runner/screenshot
+
+      - name: Upload Test Result
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: |
+            target.zip,
+            screenshot.zip
+          tag: "${{ github.head_ref || github.ref_name }}-${{ github.run_number }}"
+          token: ${{ secrets.ZOLLAB_BUILD_PUSH_TOKEN }}

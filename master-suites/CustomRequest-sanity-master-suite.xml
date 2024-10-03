@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Fan Create Custom Request Suite">
+    <suite-files>
+        <suite-file path="./suites/before-master-suite.xml">
+            <parameter name="filePath" value="/data/createCustomRequestFan.xls"></parameter>
+        </suite-file>
+        <suite-file path="./suites/login-fan-suite.xml"></suite-file>
+        <suite-file path="./suites/createCustomRequestFan.xml"></suite-file>
+        <suite-file path="./suites/createCustomPreRequestFan.xml"></suite-file>
+        <suite-file path="./suites/logout-suite.xml"></suite-file>
+        <!--Creator Login Actions-->
+        <suite-file path="./suites/login-creator-suite.xml"></suite-file>
+        <suite-file path="./suites/creatorCustomRequest.xml"></suite-file>
+        <suite-file path="./suites/creatorCounterOfferRequest.xml"></suite-file>
+        <suite-file path="./suites/logout-suite.xml"></suite-file>
+        <suite-file path="./suites/after-master-suite.xml"></suite-file>
+    </suite-files>
+</suite> <!-- Suite -->

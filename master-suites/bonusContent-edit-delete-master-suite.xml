@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Bonus Content Sanity Suite">
+	<suite-files >
+		<suite-file path="./suites/before-master-suite.xml">
+		<parameter name="filePath" value="/data/bonusContent-sanity-master-suites.xlsx"></parameter>
+		</suite-file>
+		<suite-file path="./suites/loginSuite.xml"></suite-file>
+		<suite-file path="./suites/bonusContent.xml"></suite-file>
+		<suite-file path="./suites/editBonusContent.xml"></suite-file>
+		<suite-file path="./suites/deleteBonusContent.xml"></suite-file>
+		<suite-file path="./suites/logout-suite.xml"></suite-file>
+		<suite-file path="./suites/after-master-suite.xml"></suite-file>
+	</suite-files>
+</suite> <!-- Suite -->
+

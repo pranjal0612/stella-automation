@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Before Master Suite">
+  <test name="Before Master Test">
+    <classes>
+      <class name="com.stella.playwright.master.BeforeMasterSuiteTest"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

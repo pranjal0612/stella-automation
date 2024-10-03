@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Add Card Suite">
+	<listeners>
+        <listener class-name="com.stella.playwright.listener.StellaListener"/>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+    </listeners>
+	<test name="Add Card Test">
+		<parameter name="sheetName" value="add-card"></parameter>
+		<classes>
+			<class name="com.stella.playwright.test.fan.AddCardTest"/>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
